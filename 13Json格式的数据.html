@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+
+<script>
+
+    // 对象: 应该有属性和方法,特指的某个事物
+    // 对象: 一组无序属性的集合的键值对   属性的值 可以是任意的值
+    //    function Dog(name){
+    //        this.name = name;
+    //    }
+    //
+    //    function Person(name,age){
+    //        this.name = name;
+    //        this.age = age;
+    //        this.dog = {name:"大黄"};
+    //
+    //    }
+    //    var per = new Person()
+    //    console.log(per.dog);
+
+    // Json格式的数据一般都是成对的, 键值对
+    // json也是一个对象,数据都是成对的,一般json格式的数据,无论是键还是值都是用双引号括起来的
+
+    // 正常的obj对象
+    var obj = {
+        name: "小明"
+    };
+    // json
+    var json = {
+        "name": "小明",
+        "age": "10",
+        "sex": "男"
+    };
+
+    // 遍历对象,是不能通过for循环遍历的
+    // 下面这种写法也是不支持的
+    //    console.log(json["name", "age", "sex"]);
+    //    var key = "height";
+    //    console.log(json[key]);// 这里输出结果是undefined
+
+    /**
+     * json是一门动态类型的语言,可以直接通过 .属性 来创建新的属性
+     * 但是如果只是 .属性 只是将属性声明出来,并没有给属性赋值
+     * 那么此时访问该属性,该属性的值为undefined
+     */
+    //    console.log(json.weight);
+
+    // 遍历对象,不能通过for循环 ,可以通过for0-in 循环
+    // 遍历对象,通过for-in 循环遍历对象
+
+    // key是一个变量,这个变量中存储的是该对象所有属性的名字
+    for (var key in json) {
+        // key存放的是 json对象里面 属性的名字
+        //        console.log(json[key]);
+        // 这样写是不对的, 这里是为对象里面添加一个key的属性
+        // 但是仅仅只是添加了这个key的属性, 并没有给key的属性赋值
+        // 所以输出结果是 undefined
+        //        console.log(json[key]);
+        console.log(key+"-------------"+json[key]);
+
+        // 对象中确实有这个属性,  可以通过  对象.属性名 或者 对象[属性名]
+        // 如果对象没有这个属性, 那么是不能随便 对象.属性的
+    }
+
+    /*var arr= [1,2,3,4,5];
+     for(var key in arr){
+     console.log(key+"-------"+arr[key]);
+     }*/
+
+</script>
+</body>
+</html>

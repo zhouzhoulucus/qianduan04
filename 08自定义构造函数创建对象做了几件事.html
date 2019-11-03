@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+<script>
+    /**
+     * 1. 在内存中开辟空间,存储创建的新的对象,
+     * 2. 把this设置为当前对象
+     * 3. 设置 对象的属性和方法的值
+     * 4.把this这个对象返回
+     * @param name
+     * @param age
+     * @constructor
+     */
+    function Person(name, age) {
+        this.name = name;
+        this.age = age;
+        this.sayHi = function () {
+            console.log("我叫: " + this.name + ", 我今年: " + this.age + "岁了");
+        };
+    }
+
+    // new Person这个代码 做了四件事
+    var per = new Person("小芳", 23);
+    per.sayHi();
+
+    console.log(per instanceof Person);
+</script>
+</body>
+</html>

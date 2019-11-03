@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+<script>
+
+    /**
+     * 变量 instanceof 类型的名字----------> true就是这种类型, false不是这种类型
+     *
+     * 在当前对象的方法中,可以使用this关键字代表当前对象.
+     */
+    // 人对象
+    //    var person= new Object();
+    //    person.name = "小白";
+    //    person.age=10;
+    //    person.sayHi=function(){
+    //        // 在当前这个对象方法中是可以访问当前这个对象属性的值
+    //        console.log("您好,吃了没? 我叫: "+this.name);
+    //    };
+    ////    console.log(person instanceof Object);
+    //    // 学生对象
+    //    var stu = new Object();
+    //    stu.name = "小芳";
+    //    stu.age= 18;
+    //    stu.study=function(){
+    //        console.log("学习,敲代码,今天四编,我今年"+this.age+"岁了");
+    //    };
+    //
+    //    // 小狗对象
+    //    var dog = new Object();
+    //
+    //
+    //    person.sayHi();
+    //    stu.study();
+
+    // 如何一次性创建多个对象, 把创建对象的代码封装在一个函数中
+    // 工厂模式创建对象
+    function creatObject(name,age){
+        var obj = new Object();
+        // 添加属性
+        obj.name = name;
+        obj.age = age;
+        // 添加方法
+        obj.sayHi=function(){
+            console.log("大家好,我叫"+this.name+", 我今年"+this.age+"岁了.");
+        };
+        return obj;
+    }
+
+    // 创建人的对象
+    var per1 =creatObject("小芳",18);
+    var per2 =creatObject("小王",28);
+    per1.sayHi();
+    per2.sayHi();
+    // 再创建一个人的对象
+
+
+    // 对象不能分辨出来到底是属于什么类型?
+</script>
+</body>
+</html>

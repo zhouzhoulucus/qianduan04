@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+<script>
+    // 练习:创建一个手机对象,手机有型号,颜色, 可以打电话和发短信
+    var phone = new Object();
+    phone.xinghao = "iphone8";
+    phone.color="red";
+    phone.call=function(){
+        console.log("打电话");
+    };
+    phone.text=function(){
+        console.log("发短信")
+    };
+
+    console.log(phone.xinghao);
+    console.log(phone.color);
+    phone.call();
+    phone.text();
+</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+<script>
+    function Person(name,age){
+        this.name = name;
+        this.age = age;
+        this.play=function(){
+            console.log("喜欢玩游戏")
+        }
+    }
+    var per = new Person("小三",23);
+    per["name"] = "佐助";
+    console.log(per.name);
+    console.log(per.age);
+    per["play"]();
+</script>
+</body>
+</html>

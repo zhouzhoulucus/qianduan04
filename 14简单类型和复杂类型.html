@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+
+<script>
+    //原始数据类型: number string boolean null undefined object
+    // 基本数据类型(简单类型)(值类型)  number string boolean
+
+    // 复杂类型(引用类型) object
+    // 空类型: undefined null
+
+    // 值类型的值在栈中存储
+    // 引用类型的值 是在 对象在堆上存储,地址在栈上存储
+
+    // 值类型传递的值
+    // 引用类型之间传递的是 地址(引用)
+
+    //    function f1(x){
+    //        x =100;
+    //    }
+    //    var num = 10;
+    //    f1(num);
+    //    console.log(num);
+
+    var obj = {name:"小明"};
+    function f2(obj2){
+        obj2.name = "小红";
+    }
+    f2(obj);
+    console.log(obj.name)
+</script>
+</body>
+</html>
